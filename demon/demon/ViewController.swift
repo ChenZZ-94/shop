@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func login(_ sender: Any) {
+        let viewController = GM02010100ViewController.init(nibName: "GM02010100ViewController", bundle: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
 }

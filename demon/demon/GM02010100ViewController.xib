@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GM02010100ViewController" customModule="demon" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MJx-4m-LXo">
+                    <rect key="frame" x="0.0" y="88" width="414" height="722"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ai3-GY-brk"/>
+                        <outlet property="delegate" destination="-1" id="MGn-Bd-EP5"/>
+                    </connections>
+                </tableView>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCs-UO-N6f">
+                    <rect key="frame" x="0.0" y="810" width="414" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="G6g-s9-nUD"/>
+                    </constraints>
+                    <items>
+                        <tabBarItem image="reload" id="R67-jK-w7g"/>
+                        <tabBarItem image="add" id="n95-ec-JFg">
+                            <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        </tabBarItem>
+                        <tabBarItem image="delete" id="kOy-sp-NEu"/>
+                    </items>
+                    <color key="tintColor" name="main"/>
+                    <color key="barTintColor" name="main"/>
+                </tabBar>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhi-EA-jYR">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="QDW-Qn-WZ4"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" name="main"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="商品一覧" id="MVE-D2-qtp">
+                            <barButtonItem key="rightBarButtonItem" image="logout" id="BEM-qY-Oae"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uCs-UO-N6f" firstAttribute="top" secondItem="MJx-4m-LXo" secondAttribute="bottom" id="5YU-0S-aXe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MJx-4m-LXo" secondAttribute="trailing" id="6ny-Ai-vRb"/>
+                <constraint firstItem="mhi-EA-jYR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nwg-qf-ARQ"/>
+                <constraint firstItem="uCs-UO-N6f" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bEe-MR-qhC"/>
+                <constraint firstItem="mhi-EA-jYR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ba2-fc-fFC"/>
+                <constraint firstItem="MJx-4m-LXo" firstAttribute="top" secondItem="mhi-EA-jYR" secondAttribute="bottom" id="fwE-fI-VnW"/>
+                <constraint firstItem="mhi-EA-jYR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="o83-0d-cE2"/>
+                <constraint firstItem="MJx-4m-LXo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sYC-7F-Pfg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uCs-UO-N6f" secondAttribute="bottom" id="tJO-tR-Ouw"/>
+                <constraint firstItem="uCs-UO-N6f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xXD-zl-RrL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="107"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add" width="30" height="30"/>
+        <image name="delete" width="30" height="30"/>
+        <image name="logout" width="30" height="30"/>
+        <image name="reload" width="30" height="30"/>
+        <namedColor name="main">
+            <color red="0.0" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
